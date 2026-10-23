@@ -1,1 +1,30 @@
 //testing
+using CampusLostAndFound.Library;
+var manager = new LostAndFoundManager();
+var library = manager.AddLocation("Main Library", "Library Building");
+manager.RegisterStudent("S1001", "Aisyah", "aisyah@example.com");
+manager.RegisterStudent("S1002", "Daniel", "daniel@example.com");
+var phone = manager.RecordFoundItem("Black smartphone", ItemCategory.Electronics,
+    library, DateTime.Today.AddDays(-1));
+var hoodie = manager.RecordFoundItem("Grey hoodie", ItemCategory.Clothing,
+    library, DateTime.Today.AddDays(-1));
+Console.WriteLine($"Search results: {manager.SearchItems("library").Count}");
+var claim1 = manager.SubmitClaim(phone.ItemId, "S1001", "Can unlock the phone.");
+var claim2 = manager.SubmitClaim(phone.ItemId, "S1002", "Has a purchase receipt.");
+var claim3 = manager.SubmitClaim(hoodie.ItemId, "S1002", "Name inside the collar.");
+// Staff have checked the proof and completed the handover to Aisyah.
+manager.ApproveClaim(claim1.ClaimId);
+manager.RejectClaim(claim3.ClaimId);
+Console.WriteLine($"Phone: {phone.Status}");
+Console.WriteLine($"Rival claim: {claim2.Status}");
+Console.WriteLine($"Hoodie: {hoodie.Status}");
+try
+{
+    manager.SubmitClaim(phone.ItemId, "S1002", "Another claim.");
+}
+catch (InvalidOperationException ex)
+{
+    Console.WriteLine($"Blocked: {ex.Message}");
+}
+Console.WriteLine($"Daniel's claims: {manager.GetClaimsByStudent("S1002").Count}");
+Console.WriteLine(manager.GenerateReport());
