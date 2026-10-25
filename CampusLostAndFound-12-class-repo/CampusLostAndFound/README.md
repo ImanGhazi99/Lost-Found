@@ -93,4 +93,4 @@ Lost report #1 closed: True
 Claims: 3 | Returned items: 1
 ```
 
-![UML class diagram](docs/uml-class-diagram.png)
+
