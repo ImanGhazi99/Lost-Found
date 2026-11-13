@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xwdJ/ut+ORM=",
+  "success": true,
+  "projectFilePath": "/workspaces/Lost-Found/CampusLostAndFound-12-class-repo/CampusLostAndFound/CampusLostAndFound.Library/CampusLostAndFound.Library.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/8.0.33/microsoft.netcore.app.ref.8.0.33.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.33/microsoft.aspnetcore.app.ref.8.0.33.nupkg.sha512"
+  ],
+  "logs": []
+}
