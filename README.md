@@ -4,7 +4,7 @@ A C# Windows Forms staff application for registering found items, handling lost 
 
 ## Run on Windows
 
-1. Extract the entire ZIP to a folder.
+1. Choose **Code → Download ZIP** on GitHub, then extract the entire ZIP to a folder. Use the solution and launch scripts at the repository root.
 2. Install the **.NET 8 SDK for Windows** if it is not installed (a runtime alone cannot build source).
 3. Double-click **START-HERE.cmd**. The first build may need internet access.
 
@@ -50,4 +50,8 @@ Upload the extracted source folder contents to GitHub, keeping the solution, all
 
 Suggested demonstration: introduce the project, show the dashboard, add people and an item, search it, submit/review a claim, record collection, export a receipt, demonstrate removal of an unused person, and reopen to show saved data. Use sample names and no private records in the video.
 
-After testing, upload the screen recording and check that its link is accessible to your lecturer. Only the group leader submits the **video link and GitHub repository link**. No video or GitHub upload has been created by this conversion.
+After testing, upload the screen recording and check that its link is accessible to your lecturer. Only the group leader submits the **video link and GitHub repository link**. The WinForms source is included in this repository. The demonstration video still needs to be recorded and uploaded.
+
+## Earlier materials
+
+The `CampusLostAndFound-12-class-repo` folder contains the earlier class library and report. Use the root solution for the current WinForms application. Earlier dummy files remain for reference.
